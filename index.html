@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Phonebook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="head">Phone Book</h1>
+      <div class="subcontainer">
+        <h4> Add Your Contacts</h4>
+        <form id="contactForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="text" id="phone" placeholder="Phone Number" required />
+        <br />
+        <button type="submit" class="primaryButtons" id="addContact">Add Contact</button> <span id="warning"></span>
+      </form>
+      <button type="button"  class="primaryButtons" id="viewAllContact">View All Contact</button>
+      <input type="text" id="search" placeholder="Search..." />
+      <button type="submit"  class="primaryButtons">Search</button>
+      </div>
+       </div>
+      <div class="container-2">
+            <h2 class="head"> <u>Conatacts</u></h2>
+            <Table id="contactTable">
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Phone No</th>
+                    <th>Action -1 </th>
+                    <th>Action -2</th>
+                </tr>
+                <tbody id="contactBody">
+    <!-- Data will be added here -->
+  </tbody>
+                
+            </Table>
+      </div>
+   <script src="contact.js"></script>
+  </body>
+</html>

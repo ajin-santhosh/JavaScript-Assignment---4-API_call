@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+input, button {
+  margin: 5px;
+  padding: 10px;
+}
+button.primaryButtons {
+  background-color: #33b959;
+  color: white;
+}
+#warning{
+    color: red;
+    font-size: small;
+}
+.container-2 {
+  max-width: 600px;
+  margin: auto;
+}
+.subcontainer{
+    padding: 8px;
+    border: solid rgb(58, 55, 55);
+    border-radius: 10px;
+
+}
+/* Table styling */
+#contactTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contactTable th,
+#contactTable td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+#contactTable th {
+  background-color: #4b4b4bcc;
+  color: white;
+}
+
+#contactTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#contactTable tr:hover {
+  background-color: #e0f7e0;
+}
+
+button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.edit {
+  background-color: #2196F3;
+  color: white;
+}
+
+button.delete {
+  background-color: #f44336;
+  color: white;
+}
