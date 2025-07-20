@@ -4,6 +4,7 @@ const searchWarning = document.getElementById("searchWarning")
 searchWarning.hidden = true // hiding search warning
 const inputWarning = document.getElementById("warning")
 inputWarning.hidden = true // hide input warning
+let i = 1
 // -------------------------------------------------
 async function linkContact() {
   let response = await fetch(apiURL);
@@ -15,16 +16,17 @@ function getContact(contacts) {
   contactBody.innerHTML = ""; // for clearing all data form table
 
   try {
-    contacts.forEach(listContact); // listContact will add data to table
+    contacts.forEach(listContact) // listContact will add data to table
   } catch (error) {
     console.error("Error:", error);
     alert("There was a problem");
   }
+  i=1  // changing table number to agian one
 }
 function listContact(contact) {
   const tr = document.createElement("tr");
   tr.innerHTML = `
-         <td> ${contact.id}</td>
+         <td> ${i}</td>
         <td> ${contact.name}</td>
         <td> ${contact.Phone}</td> 
         <td> <button class="edit" onclick = "updateContactButton('${contact.name}','${contact.Phone}','${contact.id}')"> Update </button></td> 
@@ -32,6 +34,7 @@ function listContact(contact) {
          
         `;
   contactBody.appendChild(tr); // add data
+   i = i+1
 }
 
 async function addContact(event) {
@@ -176,6 +179,7 @@ async function searchContact(event){
   }catch (error) {
     console.error("Search error:", error);
   }
+  i=1  // changing table number to agian one
 }
 document.getElementById("addContact").addEventListener("click", addContact);
 document.getElementById("viewAllContact").addEventListener("click", linkContact);
