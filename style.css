@@ -16,7 +16,7 @@ button.primaryButtons {
   background-color: #33b959;
   color: white;
 }
-#warning{
+.warningStyle{
     color: red;
     font-size: small;
 }
